@@ -117,8 +117,8 @@ function fresult()
     a = Number(showres.value);
     if(i == 1)
     {
-        c =  a + b;
-        // fadd;
+        // c =  a + b;
+        fadd();
     }else if(i == 2)
     {
         c = b - a;
@@ -137,10 +137,10 @@ function fresult()
 }
 
 
-// function fadd()
-// {
-//     c =  a + b;
-// }
+function fadd()
+{
+    c =  a + b;
+}
 
 // function fsub()
 // {
