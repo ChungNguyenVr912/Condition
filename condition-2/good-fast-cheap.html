@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+    <div style="margin-top: 100px; margin-left: 100px;">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault1">
+            <label class="form-check-label" for="flexSwitchCheckDefault1">Good</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault2">
+            <label class="form-check-label" for="flexSwitchCheckDefault2">Fast</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault3">
+            <label class="form-check-label" for="flexSwitchCheckDefault3">Cheap</label>
+        </div>
+    </div>
+
+
+    <script>
+        let sw1 = document.getElementById("flexSwitchCheckDefault1");
+        let sw2 = document.getElementById("flexSwitchCheckDefault2");
+        let sw3 = document.getElementById("flexSwitchCheckDefault3");
+
+        sw1.addEventListener("click", function(){
+            if(sw2.checked & sw3.checked){
+                sw3.checked = false;
+            }
+        })
+        sw2.addEventListener("click", function(){
+            if(sw1.checked & sw3.checked){
+                sw1.checked = false;
+            }
+        })
+        sw3.addEventListener("click", function(){
+            if(sw2.checked & sw1.checked){
+                sw2.checked = false;
+            }
+        })
+
+    </script>
+</body>
+</html>
